@@ -20,7 +20,7 @@ public class Main {
             
             for (Person person : people) {
                 int agePlusConstant = MathUtils.add(person.getAge(), b);
-                messenger.sendMessage(""+person.getName() + " ma " + agePlusConstant + " lat.\n");
+                messenger.sendMessage(""+person.getName() + " ma " + agePlusConstant + " lat.");
             }
         } catch (InvalidAgeException e) {
             System.err.println("Error: " + e.getMessage());
