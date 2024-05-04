@@ -14,12 +14,12 @@ public class Main {
             people[3] = new Person("Diana", 45);
             people[4] = new Person("Eve", 55);
 
-            int constant = 10;
+            final int b = 10;
 
             Messenger messenger = new EmailMessenger();
             
             for (Person person : people) {
-                int agePlusConstant = MathUtils.add(person.getAge(), constant);
+                int agePlusConstant = MathUtils.add(person.getAge(), b);
                 messenger.sendMessage(person.getName() + " ma " + agePlusConstant + " lat.");
             }
         } catch (InvalidAgeException e) {
