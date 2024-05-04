@@ -7,14 +7,21 @@ import company.utils.MathUtils;
 public class Main {
     public static void main(String[] args) {
         try {
-            Person person = new Person("Alice", 30);
-            System.out.println("Person: " + person.getName() + ", Age: " + person.getAge());
+            Person[] people = new Person[5];
+            people[0] = new Person("Alice", 30);
+            people[1] = new Person("Bob", 25);
+            people[2] = new Person("Charlie", 35);
+            people[3] = new Person("Diana", 45);
+            people[4] = new Person("Eve", 55);
 
-            int sum = MathUtils.add(5, 10);
-            System.out.println("Sum of 5 + 10 = " + sum);
+            int constant = 10;
 
             Messenger messenger = new EmailMessenger();
-            messenger.sendMessage("Hello from " + person.getName() + "! The sum is " + sum);
+            
+            for (Person person : people) {
+                int agePlusConstant = MathUtils.add(person.getAge(), constant);
+                messenger.sendMessage(person.getName() + " ma " + agePlusConstant + " lat.");
+            }
         } catch (InvalidAgeException e) {
             System.err.println("Error: " + e.getMessage());
         }
