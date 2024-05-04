@@ -8,11 +8,11 @@ public class Main {
     public static void main(String[] args) {
         try {
             Person[] people = new Person[5];
-            people[0] = new Person("Alice", 30);
-            people[1] = new Person("Bob", 25);
-            people[2] = new Person("Charlie", 35);
-            people[3] = new Person("Diana", 45);
-            people[4] = new Person("Eve", 55);
+            people[0] = new Person("Dylan", 24);
+            people[1] = new Person("Bob", 28);
+            people[2] = new Person("Jack", 32);
+            people[3] = new Person("Caitlyn", 35);
+            people[4] = new Person("Anna", 30);
 
             final int b = 10;
 
@@ -20,7 +20,7 @@ public class Main {
             
             for (Person person : people) {
                 int agePlusConstant = MathUtils.add(person.getAge(), b);
-                messenger.sendMessage(person.getName() + " ma " + agePlusConstant + " lat.");
+                messenger.sendMessage(""+person.getName() + " ma " + agePlusConstant + " lat.\n");
             }
         } catch (InvalidAgeException e) {
             System.err.println("Error: " + e.getMessage());
