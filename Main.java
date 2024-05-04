@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
         try {
             Person person = new Person("Alice", 30);
-            System.out.println("Person: " + person.getName() + ", Age: " + person.getAge());
+            System.out.println("Osoba: " + person.getName() + ", Wiek: " + person.getAge());
 
             int sum = MathUtils.add(5, 10);
-            System.out.println("Sum of 5 + 10 = " + sum);
+            System.out.println("Suma liczb: 5 + 10 = " + sum);
 
             Messenger messenger = new EmailMessenger();
-            messenger.sendMessage("Hello from " + person.getName() + "! The sum is " + sum);
+            messenger.sendMessage("Pozdrowienia od " + person.getName() + "! Suma liczb to " + sum);
         } catch (InvalidAgeException e) {
             System.err.println("Error: " + e.getMessage());
         }
