@@ -6,8 +6,8 @@ import company.implementations.EmailMessenger;
 public class Main {
     public static void main(String[] args) {
         try {
-            Person person = new Person("Alice", 30);
-            System.out.println("Osoba: " + person.getName() + ", Wiek: " + person.getAge());
+            Person person = new Person("Dylan", 30);
+            System.out.println("Osoba: " + person.getName() + "\nWiek: " + person.getAge());
 
             Messenger messenger = new EmailMessenger();
             messenger.sendMessage("Pozdrowienia od " + person.getName() + "!");
