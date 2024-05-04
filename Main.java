@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Person person = new Person("Alice", 30);
-            System.out.println("Person: " + person.getName() + ", Age: " + person.getAge());
+            System.out.println("Osoba: " + person.getName() + ", Wiek: " + person.getAge());
 
             Messenger messenger = new EmailMessenger();
-            messenger.sendMessage("Hello from " + person.getName() + "!");
+            messenger.sendMessage("Pozdrowienia od " + person.getName() + "!");
         } catch (InvalidAgeException e) {
             System.err.println("Error: " + e.getMessage());
         }
