@@ -8,7 +8,7 @@ public class Person {
 
     public Person(String name, int age) throws InvalidAgeException {
         if (age < 0 || age > 125) {
-            throw new InvalidAgeException("Invalid age: " + age + ". Age must be between 0 and 125.");
+            throw new InvalidAgeException("Niepoprawny wiek: " + age + ". Wiek musi być pomiędzy 0 a 125.");
         }
         this.name = name;
         this.age = age;
@@ -28,7 +28,7 @@ public class Person {
 
     public void setAge(int age) throws InvalidAgeException {
         if (age < 0 || age > 125) {
-            throw new InvalidAgeException("Invalid age: " + age + ". Age must be between 0 and 125.");
+            throw new InvalidAgeException("Niepoprawny wiek: " + age + ". Wiek musi być pomiędzy 0 a 125.");
         }
         this.age = age;
     }
